@@ -36,6 +36,18 @@ services:
     volumes:
       - ./scripts:/tmp/scripts
 
+  benchmark:
+    container_name: benchmark
+    build:
+      dockerfile: Dockerfile.benchmark
+    depends_on:
+      - database
+      - stac
+    command:
+      bash -c "stac-api-benchmark --url http://stac:8081 --collection s2_l2a --verbosity ERROR --num-features 20 --max-items 20"
+    volumes:
+      - ./scripts:/tmp/scripts
+
   database:
     container_name: database
     platform: linux/amd64

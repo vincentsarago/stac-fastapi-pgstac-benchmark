@@ -1,0 +1,5 @@
+FROM python:3.10
+
+ENV CURL_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
+
+RUN python -m pip install pip install https://github.com/vincentsarago/stac-api-benchmark/archive/fixResources.zip
