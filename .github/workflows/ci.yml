@@ -31,9 +31,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pre-commit pypgstac==0.6.3 psycopg["pool"]
 
-      - name: Run pre-commit
-        run: pre-commit run --all-files
-
       - name: Launch services
         run: docker-compose up -d
 
