@@ -32,7 +32,7 @@ jobs:
           python -m pip install pre-commit click pypgstac==0.6.3 psycopg["pool"]
 
       - name: Launch services
-        run: docker-compose up -d
+        run: docker-compose up -d stac database
 
       - name: Ingest Stac Items/Collection
         run: |
