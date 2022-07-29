@@ -39,6 +39,7 @@ services:
   benchmark:
     container_name: benchmark
     build:
+      context: .
       dockerfile: Dockerfile.benchmark
     depends_on:
       - database
