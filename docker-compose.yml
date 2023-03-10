@@ -51,6 +51,7 @@ services:
 
   database:
     container_name: database
+    platform: linux/amd64
     image: ghcr.io/stac-utils/pgstac:v0.7.1
     environment:
       - POSTGRES_USER=username
@@ -59,6 +60,7 @@ services:
       - PGUSER=username
       - PGPASSWORD=password
       - PGDATABASE=postgis
+      - ALLOW_IP_RANGE=0.0.0.0/0
     ports:
       - "5439:5432"
     command: postgres -N 500

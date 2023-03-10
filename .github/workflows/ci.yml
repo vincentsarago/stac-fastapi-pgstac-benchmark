@@ -46,7 +46,7 @@ jobs:
 
       - name: Run benchmark
         run: |
-          python -m pip install pip install https://github.com/vincentsarago/stac-api-benchmark/archive/fixResources.zip
+          python -m pip install https://github.com/vincentsarago/stac-api-benchmark/archive/fixResources.zip
           stac-api-benchmark --url http://127.0.0.1:8081 --collection s2_l2a --verbosity ERROR --num-features 20 --max-items 20 > bench.json
           cat bench.json
           python scripts/format_benchmark.py bench.json > output.json
