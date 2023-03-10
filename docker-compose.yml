@@ -32,7 +32,7 @@ services:
     depends_on:
       - database
     command:
-      bash -c "bash /tmp/scripts/wait-for-it.sh database:5432 -t 60 && /start.sh"
+      bash -c "bash /tmp/scripts/wait-for-it.sh database:5432 -t 120 && /start.sh"
     volumes:
       - ./scripts:/tmp/scripts
 
