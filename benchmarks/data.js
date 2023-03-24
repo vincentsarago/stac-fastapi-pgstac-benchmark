@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1678788873101,
+  "lastUpdate": 1679700630804,
   "repoUrl": "https://github.com/vincentsarago/stac-fastapi-pgstac-benchmark",
   "entries": {
     "stac-fastapi-pgstac Benchmarks": [
@@ -251,6 +251,90 @@ window.BENCHMARK_DATA = {
           {
             "name": "s2_l2a_properties.created_asc",
             "value": 0.0868515999999886,
+            "unit": "Second"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "vincent.sarago@gmail.com",
+            "name": "vincentsarago",
+            "username": "vincentsarago"
+          },
+          "committer": {
+            "email": "vincent.sarago@gmail.com",
+            "name": "vincentsarago",
+            "username": "vincentsarago"
+          },
+          "distinct": true,
+          "id": "4373e048a0021c3efd6987823f638cb5bc808cd1",
+          "message": "0.7.2",
+          "timestamp": "2023-03-25T00:24:38+01:00",
+          "tree_id": "75fcc51e1579120056fd73fc9c8d1f25f195b42c",
+          "url": "https://github.com/vincentsarago/stac-fastapi-pgstac-benchmark/commit/4373e048a0021c3efd6987823f638cb5bc808cd1"
+        },
+        "date": 1679700630257,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "step",
+            "value": 0.5328079890000197,
+            "unit": "Second"
+          },
+          {
+            "name": "tnc",
+            "value": 0.817701320999987,
+            "unit": "Second"
+          },
+          {
+            "name": "countries_apr_2019",
+            "value": 0.3090627960000063,
+            "unit": "Second"
+          },
+          {
+            "name": "countries_cloud_cover_asc",
+            "value": 0.2888033800000187,
+            "unit": "Second"
+          },
+          {
+            "name": "random_queries",
+            "value": 73.94719765700003,
+            "unit": "Second"
+          },
+          {
+            "name": "repeated",
+            "value": 142.42353998599998,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.eo:cloud_cover_desc",
+            "value": 0.10011913599998934,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.eo:cloud_cover_asc",
+            "value": 0.07210217400000829,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.datetime_desc",
+            "value": 0.1115514429999962,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.datetime_asc",
+            "value": 0.10914312099998824,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.created_desc",
+            "value": 0.09961423099997546,
+            "unit": "Second"
+          },
+          {
+            "name": "s2_l2a_properties.created_asc",
+            "value": 0.10296866300001284,
             "unit": "Second"
           }
         ]
