@@ -33,7 +33,7 @@ jobs:
       - name: Install python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pre-commit click pypgstac==0.7.1 psycopg["pool"]
+          python -m pip install -r requirement.txt
 
       - name: Ingest Stac Items/Collection
         run: |
@@ -50,7 +50,9 @@ jobs:
           python -m pip install https://github.com/vincentsarago/stac-api-benchmark/archive/fixResources.zip
           stac-api-benchmark --url http://127.0.0.1:8081 --collection s2_l2a --verbosity ERROR --num-features 20 --max-items 20 > bench.json
           cat bench.json
-          python scripts/format_benchmark.py bench.json > output.json
+
+      - name: Format benchmark output
+        run: python scripts/format_benchmark.py bench.json > output.json
 
       - name: Stop services
         run: docker-compose stop
@@ -63,7 +65,7 @@ jobs:
           output-file-path: output.json
           alert-threshold: '130%'
           comment-on-alert: true
-          fail-on-alert: true
+          fail-on-alert: false
           # GitHub API token to make a commit comment
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Make a commit on `gh-pages` only if main

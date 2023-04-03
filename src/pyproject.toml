@@ -15,7 +15,7 @@ dependencies = [
     "stac-fastapi.pgstac @ git+https://github.com/vincentsarago/stac-fastapi/@40bbcda24fb00ad05cdb925192f5fbf02701371b#egg=stac-fastapi.pgstac&subdirectory=stac_fastapi/pgstac",
     "stac-fastapi.types @ git+https://github.com/vincentsarago/stac-fastapi/@40bbcda24fb00ad05cdb925192f5fbf02701371b#egg=stac-fastapi.types&subdirectory=stac_fastapi/types",
     "starlette-cramjam>=0.3,<0.4",
-    "pypgstac==0.7.2",
+    "pypgstac==0.7.3",
     "psycopg",
     "psycopg_pool",
 ]

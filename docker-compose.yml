@@ -52,7 +52,7 @@ services:
   database:
     container_name: database
     platform: linux/amd64
-    image: ghcr.io/stac-utils/pgstac:v0.7.2
+    image: ghcr.io/stac-utils/pgstac:v0.7.3
     environment:
       - POSTGRES_USER=username
       - POSTGRES_PASSWORD=password
@@ -64,8 +64,6 @@ services:
     ports:
       - "5439:5432"
     command: postgres -N 500
-    volumes:
-      - ./.pgdata:/var/lib/postgresql/data
 
 networks:
   default:
